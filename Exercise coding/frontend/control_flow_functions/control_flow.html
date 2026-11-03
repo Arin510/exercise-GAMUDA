@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Control Flow</h1>
+
+    <script>
+          let age = 5;
+
+        if (age >= 18) {
+            console.log("You are an adult");
+        } else {
+            console.log("You are not an adult yet");
+        }
+    </script>
+
+    <script>
+        let number1, number2;
+        number1 = Number(prompt("Enter a number: "));
+        number2 = Number(prompt("Enter a second number: "));
+
+        if (number1 > number2) {
+            console.log(`${number1} is bigger than ${number2}`);
+        } else {
+            console.log(`${number2} is bigger than ${number1}`);
+        }
+    </script>
+
+    <!-- Use else if when there are more than 2 choices
+    if (condition1) {
+    // runs if condition1 is true
+    } else if (condition2) {
+    // runs if condition1 is false AND condition2 is true
+    } else {
+    // runs if BOTH are false
+    } -->
+        <script>
+        // Step 1A: if / else
+        age = 15;
+
+        if (age >= 18) {
+            console.log("You are an adult");
+        } else {
+            console.log("You are not an adult yet");
+        }
+
+        // Step 2: else if
+        number1, number2;
+        number1 = Number(prompt("Enter a number: "));
+        number2 = Number(prompt("Enter a second number: "));
+
+        if (number1 > number2) {
+            console.log(`${number1} is bigger than ${number2}`);
+        } else if (number1 === number2) {
+            console.log(`${number2} is equal to ${number1}`);
+        } else {
+            console.log(`${number2} is bigger than ${number1}`);
+        }
+    </script>
+
+    <!-- even different script the let cannot be repeat. if it repeatit show error -->
+
+    <!-- switch is When you compare one variable against many exact values. -->
+
+    <script>
+                // Step 3: switch
+        let day = Number(prompt("Enter a day (1-7): "));
+
+        switch (day) {
+            case 1:
+                console.log("Monday");
+                break;
+            case 2:
+                console.log("Tuesday");
+                break;
+            case 3:
+                console.log("Wednesday");
+                break;
+            case 4:
+                console.log("Thursday");
+                break;
+            case 5:
+                console.log("Friday");
+                break;
+            case 6:
+            case 7:
+                console.log("Weekend");
+                break;
+            default:
+                console.log("Invalid day");
+                break;
+        }
+    </script>
+</body>
+</html>

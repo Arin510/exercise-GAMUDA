@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My World</title>
+    <script>
+      // on the right tells you which line printed it. Click it and it jumps to that line. Very useful when you have many console.logs.
+      console.log("Yellow World");
+
+      let width = 5;
+      console.log(width);
+
+      let length, area;
+      length = 20;
+      area = width * length;
+      console.log(area);
+
+      let myNum = 10;
+      let myStr = "Hello World";
+      let flag = true;
+
+      console.log(typeof myNum);
+      console.log(typeof myStr);
+      console.log(typeof flag);
+
+      let a = 10;
+      let b = "10";
+      console.log(typeof a);
+      console.log(typeof b);
+
+      const PI = 3.141592653589793;
+      let radius = 10;
+      let areaOfCircle = PI * radius ** 2;
+      console.log(areaOfCircle);
+
+      // PI = 3;(as an error)
+      // Think of it like this: const locks the box, not the things inside it. Like a locker that’s bolted to the wall: you can’t swap the locker, but you can still change what’s in it.
+      const person = {
+        name: "Alice",
+        age: 30,
+      };
+
+      person.age = 150;
+      person.city = "Sabah";
+      console.log(person);
+    </script>
+
+    <script>
+      // An array [] stores many values under one name, in order.
+      let numArr = [3, 6, 7, 9, 10];
+      let fruitArr = ["Apple", "Orange", "Grape"];
+
+      console.log(numArr.length);
+      console.log(fruitArr.length);
+
+      console.log(numArr);
+      console.log(numArr[3]);
+
+      fruitArr[1] = "Durian";
+      console.log(fruitArr[1]);
+    </script>
+
+    <script>
+      // An object {} is a group where items are found by name.
+      let student = {
+        firstName: "Kiara",
+        lastName: "Wildan",
+        age: 19,
+      };
+
+      console.log(student.firstName);
+      console.log(student["lastName"]);
+
+      student.age = 20;
+      console.log(student.age);
+    </script>
+
+    <script>
+      // array inside the object
+      let friend = {
+        firstName: "Juwita",
+        hobbies: ["singing", "readings", "sleeping"],
+      };
+
+      console.log(friend.hobbies);
+      console.log(friend.hobbies[0]);
+      console.log(friend.hobbies.length);
+    </script>
+
+    <script>
+      //  <!-- Comparing two values true or false -->
+      console.log(10 === 10);
+      console.log(10 === "10");
+      console.log(10 == "10");
+      console.log(10 !== "10");
+
+      console.log(0 == "");
+      console.log(0 == false);
+      console.log(0 === false);
+
+      let number1 = 0.3;
+      let number2 = 0.1 + 0.2;
+      console.log(number2);
+      console.log(number1 === number2);
+      //0.1 and 0.2 become endless numbers in binary: 0.0001100110011...
+      // The computer has to cut them off, so a tiny bit is lost.
+      // That’s why the sum comes out as 0.30000000000000004, not exactly 0.3.
+    </script>
+  </head>
+  <body>
+    <h1>My first World</h1>
+  </body>
+</html>

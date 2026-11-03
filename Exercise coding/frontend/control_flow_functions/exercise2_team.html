@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Team Members</h1>
+    <script>
+
+    let teamMember1 = {
+        firstName: "Daus",
+        lastName: "lead",
+        hobbies: ["Reading", "Hiking", "Coding"],
+        favoriteFoods: ["Pizza", "Sushi", "Chocolate"],
+        pets: ["Dog", "Cat"]
+    };
+
+      let teamMember2 = {
+        firstName: "Sabastian",
+        lastName: "Daniel",
+        hobbies: ["Reading", "Hiking", "Coding"],
+        favoriteFoods: ["Pizza", "Sushi", "Chocolate"],
+        pets: ["Dog", "Cat"]
+    };
+
+      let teamMember3 = {
+        firstName: "Jax",
+        lastName: "tak tau",
+        hobbies: ["Reading", "Hiking", "Coding"],
+        favoriteFoods: ["Pizza", "Sushi", "Chocolate"],
+        pets: ["Dog", "Cat"]
+    };
+
+      let teamMember4 = {
+        firstName: "Anisa",
+        lastName: "unknown",
+        hobbies: ["Reading", "Hiking", "Coding"],
+        favoriteFoods: ["Pizza", "Sushi", "Chocolate"],
+        pets: ["Dog", "Cat"]
+    };
+
+      let teamMember5 = {
+        firstName: "Ain",
+        lastName: "raine",
+        hobbies: ["Reading", "Hiking", "Coding"],
+        favoriteFoods: ["Pizza", "Sushi", "Chocolate"],
+        pets: ["Dog", "Cat"]
+    };
+
+    // Function 1: full name
+    function getFullName(member) {
+        return `${member.firstName} ${member.lastName}`;
+    }
+
+    console.log("Full Name:", getFullName(teamMember1));
+    console.log("Full Name:", getFullName(teamMember2));
+    console.log("Full Name:", getFullName(teamMember3));
+    console.log("Full Name:", getFullName(teamMember4));
+    console.log("Full Name:", getFullName(teamMember5));
+    </script>
+
+    <script>
+            // Function 2: food lover (more than 1 favourite food)
+    function isFoodLover(member) {
+        return member.favoriteFoods.length > 1;
+    }
+
+    // Function 3: pet keeper (more than 1 pet)
+    function isPetKeeper(member) {
+        return member.pets.length > 1;
+    }
+
+    // Function 4: count vowels in full name
+    function countFullNameVowels(member) {
+    const fullName = getFullName(member).toLowerCase();
+    const vowels = "aeiou";
+    let vowelCount = 0;
+
+    for (let i = 0; i < fullName.length; i++) {
+        if (vowels.includes(fullName[i])) {
+            vowelCount++;
+        }
+    }
+    return vowelCount;
+    }
+
+    console.log("Food Lover:", isFoodLover(teamMember1));
+    console.log("Pet Keeper:", isPetKeeper(teamMember1));
+    console.log("Vowels:", countFullNameVowels(teamMember1));
+    </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>Operators</h1>
+    <script>
+    // A. Arithmetic: % (remainder)
+    console.log(7 % 2);
+    console.log(10 % 2);
+
+    // B. Comparison
+    let number1 = 3;
+    let number2 = 5;
+    console.log(number1 === number2);
+    console.log(number1 !== number2);
+    console.log(number1 > number2);
+    console.log(number1 <= number2);
+
+    // C. Logical: && (AND)
+    let num = 3;
+
+    if (num > 0 && num < 10) {
+        console.log("Number is above zero but below 10.");
+    } else {
+        console.log("Number is not in the range.");
+    }
+
+    // C. Logical: || (OR)
+    if (num === 3 || num === 7) {
+        console.log("Number is either 3 or 7.");
+    } else {
+        console.log("Number doesn't match with any target value.");
+    }
+    </script>
+
+    <script>
+    //if / else if / else with &
+    let age = Number(prompt("Enter your age: "));
+
+    if (age >= 0 && age <= 12) {      // Child: 0 to 12
+        console.log("Child");
+    } else if (age >= 13 && age <=19) {     // Teenager: 13 to 19
+        console.log("Teenager");
+    } else if (age>= 20 && age <= 64) {    // Adult: 20 to 64
+        console.log("Adult");
+    } else if (age >= 65) {                  // Senior: 65 and above
+        console.log("Senior");
+    } else {                                 // anything else (negative)
+    console.log("Invalid age");
+}
+    </script>
+    
+    <script>
+    //A loop runs the same code many times, so you dont have to type it again and again.
+    // A. count 0 to 4
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
+    }
+
+    // B. add up all numbers in an array (slide 12)
+    let myArray = [4, 5, 6, 10, 12];
+    let total = 0;
+
+    for (let i = 0; i < myArray.length; i++) {
+        total += myArray[i];
+    }
+
+    console.log(total);
+
+    </script>
+
+    <script>
+    // Step 7A: while loop
+    let number = 0;
+    let sum = 0;
+
+    while (number < 8) {
+    number = Math.floor(Math.random() * 10 + 1);
+    console.log(number);
+    sum += number;
+    }
+
+    console.log("The sum of numbers is " + sum);
+    </script>
+
+    <script>
+    // Step 7B: do...while loop
+    let number2b;
+    let sum2 = 0;
+
+    do {
+    number2b = Math.floor(Math.random() * 10 + 1);
+    console.log(number2b);
+    sum2 += number2b;
+    } while (number2b < 8);
+
+    console.log("The do-while sum is " + sum2);
+    </script>
+
+    <script>
+    // Step 8A: basic function
+    function printName() {
+        console.log("My name is AIN");
+    }
+
+    printName();
+    printName();
+    </script>
+
+    <script>
+    // Step 8B: parameter
+    function sayName(myName) {
+        console.log("My name is " + myName);
+    }
+
+    sayName("ARIF");
+    sayName("HAKIM");
+    </script>
+
+    <script>
+    // Step 8C: return
+    function addition(num1, num2) {
+        let result = num1 + num2;
+        return result;
+    }
+
+    let additionResult = addition(5, 9);
+    console.log("The addition result is " + additionResult);
+    </script>
+
+    <script>
+    // Step 8D: default value
+    function say(name, age = 0) {
+        console.log(`My name is ${name}. I'm ${age} this year`);
+    }
+
+    say("ARIAN", 5);
+    say("ARIAN");
+    </script>
+
+    <script>
+    // Step 9A: anonymous function
+    let addTwo = function (num1, num2) {
+        return num1 + num2;
+    };
+
+    console.log("The addition result is " + addTwo(8, 9));
+    </script>
+
+    <script>
+    // Step 9B: arrow functions
+    let greet = () => "Hye AIN";
+    let message = greet();
+    console.log(message);
+
+    let addArrow = (num1, num2) => num1 + num2;
+    let calcResult = addArrow(5, 6);
+    console.log(calcResult);
+    </script>
+
+    <script>
+    // 1. Normal function
+    function add1(a, b) {
+        return a + b;
+    }
+
+    // 2. Anonymous function
+    let add2 = function (a, b) {
+        return a + b;
+    };
+
+    // 3. Arrow function
+    let add3 = (a, b) => a + b;
+
+    console.log(add1(2, 3));
+    console.log(add2(2, 3));
+    console.log(add3(2, 3));
+    
+    </script>
+</body>
+</html>
