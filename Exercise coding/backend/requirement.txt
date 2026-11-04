@@ -10,3 +10,6 @@ requests
 langchain-text-splitters
 langchain-mongodb
 pymongo
+tavily-python
+langchain
+langsmith
