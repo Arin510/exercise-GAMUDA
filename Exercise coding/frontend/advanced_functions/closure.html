@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Closure</h1>
+    <script>
+        let counter = 0
+
+        function add() {
+            counter += 1;
+        }
+
+        add();
+        add();
+        add();
+
+        // counter = 999;
+        console.log("The global counter is:" + counter)
+
+        function myCounter() {
+            let count = 0;
+            return function (){
+                count ++;
+                return count;
+
+            };
+        }
+
+        const addOne = myCounter();
+
+        console.log("The closure is : " + addOne());
+        console.log("The closure is : " + addOne());
+        console.log("The closure is : " + addOne());
+
+        count.log("Accessing count : " + addOne());
+
+        
+
+    </script>
+    
+</body>
+</html>

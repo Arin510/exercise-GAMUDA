@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function callbackFunction() {
+            console.log("I am a callbackFunction");
+
+        }
+
+        function higherOrderFunction(func) {
+            console.log("I am higher order function")
+            func();
+        }
+
+        higherOrderFunction(callbackFunction);
+
+        const radius = [1,2,3];
+        const calculateArea = function (radius) {
+            const output = []
+            for (let i = 0; i < radius.length; i++) {
+                output.push(Math.PI * radius [i] * radius [i]);
+            }
+            return output;
+        };
+
+        const calculateDiameter = function ( radius) {
+            const output = [];
+            for (let i = 0; i < radius.length; i++) {
+                output.push(2* radius [i]);
+            }
+            return output;
+        };
+
+        const calculate = function (radius, logic) {
+            const output = [];
+            for (let i = 0; i < radius.length; i++) {
+                output.push(logic(radius[i]));
+            }
+            return output;
+        };
+
+          const area = function (r) {
+            return Math.PI * r * r;
+        };
+
+        const diameter = function (r) {
+            return 2 * r;
+        };
+
+        console.log(calculateArea(radius));
+        console.log(calculateDiameter(radius));
+    </script>
+</body>
+</html>

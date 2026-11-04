@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <script>
+        const apiUrl = "https://jsonplaceholder.typicode.com/users";
+
+        function fetchData (url, callback) {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => callback(data))
+                .catch(error => callback(error))
+
+        }
+
+        fetchData(apiUrl,(data)=> {
+            console.log(data);
+        });
+
+        console.log("This will be execute immediately")
+
+        async function getUsers() {
+            try {
+                const response = await fetch (apiUrl);
+                const users = await response.json();
+                console.log("First user:", users[0].name);
+            }catch (error) {
+                console.log("ERROR:", error)
+            }
+        }
+
+        getUsers();
+
+    </script>
+</body>
+</html>

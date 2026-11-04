@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let counter = 10;
+
+        function reduceToZero(n) {
+            // Base case: the STOPPER
+            if (n === 0) {
+                console.log("It's Time");
+                return;
+            }
+            console.log("Current value is: " + n);
+
+            // Recursive call: call ITSELF with a smaller number
+            reduceToZero(n - 1);
+        }
+
+        reduceToZero(counter);
+
+        for (let i = 10; i > 0; i--) {
+            console.log("Loop value is: " + i);
+        }
+        console.log("It's Time (loop)");
+
+                function factorial(n) {
+            if (n === 1) {          // base case
+                return 1;
+            }
+            return n * factorial(n - 1);   // recursive call
+        }
+
+        console.log(factorial(5));
+    </script>
+
+    <script>
+        class Member{
+            constructor(firstName, lastName) {
+                this._firstname = firstName;
+                this._lastname = lastName;
+            }
+
+        greet() {
+            console.log(`hello my name is ${this._firstname} ${this._lastName}`);
+        }
+        }
+        let member1 = new Member("Johnny", "Bravo");
+        let member2 = new Member ("Arif", "Ain");
+
+        member1.greet();
+        member2.greet();
+    </script>
+</body>
+</html>

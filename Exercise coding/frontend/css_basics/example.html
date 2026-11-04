@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Tutorial</title>
+    <link rel="stylesheet" href="example.css">
+</head>
+<body>
+    <!-- 1. Inline CSS -->
+    <h4>1. Inline CSS (Highest Priority)</h4>
+    <p style="color: red; font-size: 18px;">
+        This text uses inline CSS: red and 18px
+    </p>
+
+    <!-- 2. Internal CSS -->
+    <h4>2. Internal CSS (Medium Priority)</h4>
+    <p class="black-text">
+        This text uses internal CSS: blue and 25px
+    </p>
+
+    <style>
+    /* css */
+        .blue-text {
+            color: orange;
+            font-weight: bold;
+            font-size: 25px;
+        }
+    </style>
+
+    <!-- 3. External CSS -->
+    <h4>3. External CSS (Lowest Priority)</h4>
+    <p class="external-css">
+        This text uses external CSS: orange and 30px
+    </p>
+</body>
+</html>
